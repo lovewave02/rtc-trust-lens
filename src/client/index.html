@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTC Trust Lens</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel controls">
+        <h1>RTC Trust Lens</h1>
+        <label>Room ID <input id="roomId" value="demo-room" /></label>
+        <button id="joinBtn">Join Room</button>
+        <button id="callBtn" disabled>Start Call</button>
+      </section>
+
+      <section class="panel videos">
+        <div>
+          <h3>Local</h3>
+          <video id="localVideo" autoplay muted playsinline></video>
+        </div>
+        <div>
+          <h3>Remote</h3>
+          <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+      </section>
+
+      <section class="panel metrics">
+        <h2>Trust Signals</h2>
+        <p id="metricsLine">No stats yet.</p>
+        <p id="integrityLine">Integrity: pending</p>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

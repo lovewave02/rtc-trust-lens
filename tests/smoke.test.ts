@@ -1,3 +1,9 @@
-import { normalizeNetworkScore } from '../src/metrics';
+import { describe, expect, it } from 'vitest';
 
-if (normalizeNetworkScore(0, 0) !== 100) throw new Error('network score failed');
+import { normalizeNetworkScore } from '../src/metrics.js';
+
+describe('smoke', () => {
+  it('keeps existing utility behavior', () => {
+    expect(normalizeNetworkScore(0, 0)).toBe(100);
+  });
+});
